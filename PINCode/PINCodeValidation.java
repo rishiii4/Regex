@@ -11,6 +11,9 @@ public class PINCodeValidation {
         // Testing with Special Character
         String pinCode3 = "40008@";
 
+        // Testing with Space
+        String pinCode4 = "400 088";
+
         // PIN code validation pattern
         String regex = "^[1-9][0-9]{2}\\s?[0-9]{3}$";
 
@@ -25,5 +28,9 @@ public class PINCodeValidation {
         // It should fail
         boolean isValid3 = Pattern.matches(regex, pinCode3);
         System.out.println("Is valid PIN Code? " + isValid3);
+
+        // It should not fail
+        boolean isValid4 = Pattern.matches(regex, pinCode4);
+        System.out.println("Is valid PIN Code? " + isValid4);
     }
 }
